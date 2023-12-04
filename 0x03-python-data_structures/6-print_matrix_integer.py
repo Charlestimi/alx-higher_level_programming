@@ -3,9 +3,9 @@ def print_matrix_integer(matrix=[[]]):
     if not matrix:
         print()
     else:
-        for row in range(len(matrix)):
-            for number in range(len(matrix[row])):
-                if number != len(matrix[row]) - 1:
+        for row in matrix:
+            for number in row:
+                if number != row:
                     endspace = " "
-                print("{:d}".format(matrix[row][number]), end=endspace)
+                print("{:d}".format(number), end=endspace)
             print()
